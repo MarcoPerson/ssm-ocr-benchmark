@@ -1,4 +1,4 @@
-# SSM-OCR Benchmark
+# State-Space Models vs. Transformers & BiLSTMs
 
 **A Benchmark of State-Space Models vs. Transformers and BiLSTM-based Models for Historical Newspaper OCR**
 
