@@ -22,8 +22,8 @@ We are preparing everything for a clean, reproducible release. Watch or star thi
 - [ ] Mamba-based OCR architectures (CTC, autoregressive, non-autoregressive variants)
 - [ ] Baseline configurations (VAN, DAN, DANIEL)
 - [ ] Trained model checkpoints
-- [ ] Standardized train / validation / test splits
-- [ ] Gold-standard (>99% verified) test annotations
+- [ ] Our paragraph-level dataset (extracted and annotated from BnL), with gold-standard (>99% verified) test set
+- [ ] Standardized train / validation / test splits at line and paragraph level
 - [ ] Evaluation scripts (CER / WER, latency, throughput, memory)
 
 ---
@@ -39,7 +39,7 @@ We investigate linear-time **State-Space Models (SSMs)**, specifically Mamba, as
 - **First SSM-based OCR.** A CNN encoder with bidirectional and autoregressive Mamba, in three decoding variants (CTC, AR, NAR).
 - **Controlled benchmark.** 6 neural models across 3 decoding paradigms and 3 model families, plus 4 production OCR engines (PERO-OCR, Tesseract, TrOCR, Gemini), all under identical training.
 - **Dual granularity.** Evaluated at both line and paragraph level.
-- **Reproducible release.** Code, checkpoints, splits, and gold-standard (>99%) test annotations.
+- **Reproducible release.** Code, checkpoints, and standardized splits, plus our own paragraph-level dataset with gold-standard (>99%) test annotations.
 
 ## Key results
 
@@ -51,9 +51,17 @@ On historical newspapers from the Bibliothèque nationale du Luxembourg (BnL), a
 
 ## Dataset
 
-The benchmark uses public-domain pre-1878 newspapers from the Bibliothèque nationale du Luxembourg, in German, French, and Luxembourgish, at both line and paragraph granularity. Links to the data and our standardized splits will be added here on release.
+The benchmark is built on public-domain pre-1878 newspapers from the Bibliothèque nationale du Luxembourg (BnL), in German, French, and Luxembourgish.
+
+**Line level.** The line images and transcriptions come from BnL's existing annotations. Our contribution at this level is the standardized train / validation / test split, which we release for reproducibility.
+
+**Paragraph level.** We extracted the paragraph regions directly from the BnL collection and annotated them ourselves, including the gold-standard (>99% verified) test set. The paragraph dataset and its splits are an original contribution of this work.
+
+Links to the data and our standardized splits will be added here on release.
 
 Source collection: https://data.bnl.lu/data/historical-newspapers/
+
+Please also cite or acknowledge the Bibliothèque nationale du Luxembourg when using these materials.
 
 ## Citation
 
