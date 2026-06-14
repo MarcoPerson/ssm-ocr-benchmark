@@ -68,7 +68,7 @@ Please also cite or acknowledge the Bibliothèque nationale du Luxembourg when u
 If you find this work useful, please cite:
 
 ```bibtex
-@inproceedings{ssmocr2026,
+@inproceedings{agbeti2026ssmocr,
   title     = {A Benchmark of State-Space Models vs. Transformers and BiLSTM-based Models for Historical Newspaper OCR},
   author    = {Agbeti-Messan, Merveilles and Chatelain, Clement and Tranouez, Pierre and Nicolas, Stephane and Paquet, Thierry},
   booktitle = {International Conference on Document Analysis and Recognition (ICDAR)},
